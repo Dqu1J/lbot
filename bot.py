@@ -19,13 +19,13 @@ async def update_stats():
         elif i == 1:
             value = str(guild.premium_subscription_count)
             await channel.edit(name=f"Бустеры: {value}")
-        else:
-            value = 0
-            for member in guild.members:
-                if str(member.status) == "online":
-                    value += 1
-            value = str(value)
-            await channel.edit(name=f"Онлайн: {value}")
+        # else:
+        #     value = 0
+        #     for member in guild.members:
+        #         if str(member.status) == "online":
+        #             value += 1
+        #     value = str(value)
+        #     await channel.edit(name=f"Онлайн: {value}")
 
 @client.event
 async def on_ready():
